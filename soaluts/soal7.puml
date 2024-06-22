@@ -1,0 +1,50 @@
+@startuml soaluts
+start
+
+:Menampilkan Menu;
+:1. Tambah;
+:2. Kurang;
+:3. Kali;
+:4. Bagi;
+
+:Masukkan pilihan Anda;
+:pilihan;
+
+if (pilihan == 1) then
+    :Masukkan angka pertama;
+    :a;
+    :Masukkan angka kedua;
+    :b;
+    :Hasil = a + b;
+    :Menampilkan hasil penambahan;
+elseif (pilihan == 2) then
+    :Masukkan angka pertama;
+    :a;
+    :Masukkan angka kedua;
+    :b;
+    :Hasil = a - b;
+    :Menampilkan hasil pengurangan;
+elseif (pilihan == 3) then
+    :Masukkan angka pertama;
+    :a;
+    :Masukkan angka kedua;
+    :b;
+    :Hasil = a * b;
+    :Menampilkan hasil perkalian;
+elseif (pilihan == 4) then
+    :Masukkan angka pertama;
+    :a;
+    :Masukkan angka kedua;
+    :b;
+    if (b == 0) then (yes)
+        :Error: Pembagian dengan nol tidak diperbolehkan;
+    else (no)
+        :Hasil = a / b;
+        :Menampilkan hasil pembagian;
+    endif
+else
+    :Pilihan tidak valid;
+endif
+
+stop
+@enduml 
